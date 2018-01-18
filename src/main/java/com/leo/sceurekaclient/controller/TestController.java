@@ -15,11 +15,11 @@ import com.leo.sceurekaclient.RestResponse;
 @RequestMapping("/test")
 public class TestController {
 
-//    @Value("${eureka.client.service-url.defaultZone}")
-//    private String url;
+    @Value("${server.port}")
+    private String serverPort;
 
     @GetMapping("/test-string")
     public BaseResponse test() {
-        return new RestResponse<>("this is a test" );
+        return new RestResponse<>("this is a test" + serverPort);
     }
 }
