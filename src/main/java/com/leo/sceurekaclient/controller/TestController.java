@@ -16,8 +16,12 @@ public class TestController {
     @Value("${server.port}")
     private String serverPort;
 
+//    @Value("${config-client}")
+//    String configClient;
+
+
     @GetMapping("/test")
     public BaseResponse test() {
-        return new RestResponse<>("this is a test" + serverPort);
+        return new RestResponse<>("this is a test" + serverPort );
     }
 }
